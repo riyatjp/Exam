@@ -1,0 +1,22 @@
+echo Enter a number:
+read n
+x=0
+y=1
+i=2
+if [[ $n -lt 5 ]]
+then
+echo Minimum 5 values is required in the series.Hence enter a value starting from 5.
+else
+echo Fibonacci series:
+echo $x
+echo $y
+while [[ $i -lt $n ]]  
+do
+i=$(($i+1))
+z=$(($x+$y))
+x=$y
+y=$z
+echo $z
+done
+fi
+
